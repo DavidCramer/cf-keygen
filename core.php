@@ -33,7 +33,7 @@ function cf_keygen_register_processor($pr){
 		"author_url"        =>  'http://cramer.co.za',
 		"processor"         =>  'cf_keygen_make_key',
 		"template"          =>  plugin_dir_path(__FILE__) . "config.php",
-		
+		"icon"				=>	plugin_dir_url(__FILE__) . "icon.png",
 		"default"   =>  array(
 			'pattern'   =>  '****-****-****-****'
 			),
@@ -50,6 +50,7 @@ function cf_keygen_register_processor($pr){
 		"author_url"        =>  'http://cramer.co.za',
 		"pre_processor"     =>  'cf_keygen_verify_key',
 		"processor"         =>  'cf_keygen_bind_key',
+		"icon"				=>	plugin_dir_url(__FILE__) . "icon-validate.png",
 		"template"          =>  plugin_dir_path(__FILE__) . "config_verify.php",
 		//"meta_template"		=>  plugin_dir_path(__FILE__) . "meta_template.php",
 		"magic_tags"	=>	array(
