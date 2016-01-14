@@ -90,7 +90,7 @@ function cf_keygen_verify_key($config, $form){
 		if(!empty($config['limit'])){
 			$query = "SELECT COUNT(`meta`.`entry_id`) AS `total`
 					FROM `" . $wpdb->prefix . "cf_form_entry_meta` AS `meta`
-					LEFT JOIN `dev_cf_form_entries` AS `entry` ON (`meta`.`entry_id` = `entry`.`id`) 
+					LEFT JOIN `" . $wpdb->prefix . "cf_form_entries` AS `entry` ON (`meta`.`entry_id` = `entry`.`id`) 
 					WHERE `meta`.`meta_key` = 'verified_key' AND `entry`.`status` = 'active' AND `meta`.`meta_value` = %s ;";
 
 			$in_limit = $wpdb->get_var( $wpdb->prepare( $query, $entry) );
